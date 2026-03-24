@@ -264,9 +264,13 @@ h4,
 .btn-primary {
     background: var(--accent-gradient);
     background-size: 200% auto;
-    color: #0b0b0b;
+    color: #0b0b0b !important;
     border: none;
     box-shadow: 0 10px 25px rgba(201, 168, 76, 0.25);
+}
+
+.navbar .nav-links a.btn-primary {
+    color: #0b0b0b !important;
 }
 
 .btn-primary:hover {
