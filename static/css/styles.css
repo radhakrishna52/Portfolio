@@ -182,7 +182,8 @@ h4,
     padding: 0.9rem 2.2rem;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
     transition: var(--transition);
     display: inline-block;
     cursor: pointer;
@@ -191,7 +192,7 @@ h4,
 .btn-primary {
     background: var(--accent-gradient);
     background-size: 200% auto;
-    color: white;
+    color: #0b0b0b;
     border: none;
     box-shadow: 0 10px 25px rgba(201, 168, 76, 0.25);
 }
@@ -200,6 +201,7 @@ h4,
     background-position: right center;
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(201, 168, 76, 0.4);
+    color: #0b0b0b;
 }
 
 .btn-secondary {
