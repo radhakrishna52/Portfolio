@@ -23,12 +23,12 @@
 }
 
 body {
-    font-family: 'Ephesis', cursive;
+    font-family: 'Cormorant Garamond', serif;
     color: var(--text-main);
     background-color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     font-size: 1.25rem;
 }
 
@@ -49,8 +49,8 @@ h2,
 h3,
 h4,
 .logo {
-    font-family: 'Ephesis', cursive;
-    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .container {
