@@ -329,10 +329,11 @@ h4,
     position: absolute;
     bottom: -15px;
     left: 0;
-    width: 60px;
+    width: 80px;
     height: 4px;
-    background: var(--accent-gradient);
+    background: linear-gradient(90deg, #c9a84c 0%, #e8d5a3 100%);
     border-radius: 10px;
+    z-index: 1;
 }
 
 .section-heading,
