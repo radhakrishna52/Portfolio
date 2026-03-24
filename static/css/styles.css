@@ -29,6 +29,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     letter-spacing: 0.5px;
+    font-size: 1.25rem;
 }
 
 a,
@@ -80,7 +81,7 @@ h4,
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     color: white;
     text-decoration: none;
     letter-spacing: -0.5px;
@@ -103,7 +104,7 @@ h4,
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     transition: var(--transition);
 }
 
@@ -131,7 +132,7 @@ h4,
 }
 
 .hero-title {
-    font-size: clamp(3rem, 10vw, 4.5rem);
+    font-size: clamp(4rem, 12vw, 6.5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: white;
@@ -139,7 +140,7 @@ h4,
 }
 
 .hero-subtitle-dev {
-    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -156,7 +157,7 @@ h4,
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     color: var(--text-muted);
     margin-bottom: 2.5rem;
     max-width: 650px;
@@ -210,7 +211,7 @@ h4,
 }
 
 .section-heading {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
     margin-bottom: 4rem;
     color: white;
     position: relative;
@@ -259,13 +260,13 @@ h4,
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
 .subsection-title {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     margin: 3rem 0 1.5rem;
     color: white;
 }
@@ -293,7 +294,7 @@ h4,
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--text-main);
     display: flex;
@@ -400,7 +401,7 @@ h4,
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 0.8rem;
     color: white;
     display: flex;
@@ -425,7 +426,7 @@ h4,
 .project-info p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 
@@ -502,7 +503,7 @@ h4,
 }
 
 .timeline-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin-bottom: 0.4rem;
     color: white;
 }
@@ -619,7 +620,7 @@ h4,
 }
 
 .contact-card p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-muted);
     margin-bottom: 3rem;
     max-width: 650px;
