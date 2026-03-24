@@ -441,9 +441,15 @@ h4,
 }
 
 .skills-grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.skills-category {
+    flex: 1;
+    min-width: 250px;
 }
 
 @media (max-width: 1024px) {
