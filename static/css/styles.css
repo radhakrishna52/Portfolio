@@ -358,14 +358,86 @@ h4,
 
 /* About & Skills */
 .about-grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
 }
 
-.about-text p {
-    font-size: 1.3rem;
+.about-main-text {
+    max-width: 900px;
+}
+
+.about-main-text p {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.about-details-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.about-card-mini {
+    padding: 2.5rem;
+    height: 100%;
+}
+
+.about-card-mini p {
+    font-size: 1.15rem;
     color: var(--text-muted);
-    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.soft-skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.soft-skill-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: var(--transition);
+}
+
+.soft-skill-tag i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.soft-skill-tag:hover {
+    background: rgba(201, 168, 76, 0.08);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.skills-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+    .about-details-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .skills-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 .subsection-title {
