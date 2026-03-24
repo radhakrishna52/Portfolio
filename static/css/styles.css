@@ -315,27 +315,25 @@ h4,
 
 .section-heading,
 .timeline-item {
-    opacity: 0;
     transition: var(--transition);
 }
 
-/* Reveal Animations */
-.reveal-fade-up {
+/* Base state for animated elements */
+[class*="reveal-"] {
     opacity: 0;
-    transform: translateY(40px);
     transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal-fade-up {
+    transform: translateY(40px);
 }
 
 .reveal-from-left {
-    opacity: 0;
     transform: translateX(-60px);
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .reveal-from-right {
-    opacity: 0;
     transform: translateX(60px);
-    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .visible {
@@ -459,14 +457,6 @@ h4,
 .project-link {
     display: block !important;
     height: 100%;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: var(--transition);
-}
-
-.project-link.reveal {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .project-image {
