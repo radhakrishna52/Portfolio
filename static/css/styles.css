@@ -32,6 +32,78 @@ body {
     font-size: 1.25rem;
 }
 
+.luxe-cursor-enabled {
+    cursor: none !important;
+}
+
+.luxe-cursor-enabled a, 
+.luxe-cursor-enabled button,
+.luxe-cursor-enabled .btn,
+.luxe-cursor-enabled .project-card {
+    cursor: none !important;
+}
+
+#cursor-dot, #cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    pointer-events: none;
+    transition: transform 0.2s ease-out, opacity 0.2s;
+}
+
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+}
+
+#cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary);
+}
+
+#cursor-outline.cursor-hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: rgba(201, 168, 76, 0.1);
+    border-color: var(--secondary);
+}
+
+/* Background Decorations */
+.bg-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--glow-primary) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    transition: transform 0.5s ease-out;
+}
+
+.blob-1 { top: -100px; right: -100px; animation: floatBlob 20s infinite alternate; }
+.blob-2 { bottom: -100px; left: -100px; animation: floatBlob 25s infinite alternate-reverse; }
+.blob-3 { top: 40%; left: 30%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(232, 213, 163, 0.15) 0%, transparent 70%); animation: floatBlob 15s infinite alternate; }
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 100px) scale(1.2); }
+}
+
 a,
 a *,
 a:hover,
@@ -244,14 +316,31 @@ h4,
 .section-heading,
 .timeline-item {
     opacity: 0;
-    transform: translateY(30px);
     transition: var(--transition);
 }
 
-.section-heading.reveal,
-.timeline-item.reveal {
-    opacity: 1;
-    transform: translateY(0);
+/* Reveal Animations */
+.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal-from-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal-from-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.visible {
+    opacity: 1 !important;
+    transform: translate(0) !important;
 }
 
 /* Glass Card Global */

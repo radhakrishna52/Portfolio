@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Portfolio{% endblock %}</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=4">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,7 +15,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="luxe-cursor-enabled">
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
+    <!-- Animated Background Decorations -->
+    <div class="bg-decorations">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <nav class="navbar">
         <div class="container">
             <a href="/" class="logo">Radha Krishna</a>
@@ -41,24 +52,79 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Custom Cursor Logic ---
+            const cursorDot = document.getElementById('cursor-dot');
+            const cursorOutline = document.getElementById('cursor-outline');
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let outlineX = 0;
+            let outlineY = 0;
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                // Dot moves instantly
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+            });
+
+            // Smooth outline trailing
+            const animateCursor = () => {
+                let distX = mouseX - outlineX;
+                let distY = mouseY - outlineY;
+
+                outlineX = outlineX + (distX * 0.15);
+                outlineY = outlineY + (distY * 0.15);
+
+                cursorOutline.style.left = `${outlineX}px`;
+                cursorOutline.style.top = `${outlineY}px`;
+
+                requestAnimationFrame(animateCursor);
+            };
+            animateCursor();
+
+            // Hover effects for cursor
+            const links = document.querySelectorAll('a, button, .project-card, .btn');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    cursorOutline.classList.add('cursor-hover');
+                });
+                link.addEventListener('mouseleave', () => {
+                    cursorOutline.classList.remove('cursor-hover');
+                });
+            });
+
+            // --- Parallax Background Logic ---
+            const blobs = document.querySelectorAll('.blob');
+            window.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                blobs.forEach((blob, index) => {
+                    const speed = (index + 1) * 20;
+                    blob.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+                });
+            });
+
+            // --- Intersection Observer for Scroll Reveals ---
             const observerOptions = {
-                threshold: 0.1
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
             };
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal');
+                        entry.target.classList.add('visible');
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            const revealElements = document.querySelectorAll('.project-link, .section-heading, .timeline-item');
-            revealElements.forEach((el, index) => {
-                // Add index for potential stagger logic if multiple elements hit observer at once
-                observer.observe(el);
-            });
+            const revealElements = document.querySelectorAll('.reveal-fade-up, .reveal-from-left, .reveal-from-right, .project-card');
+            revealElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>
