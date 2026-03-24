@@ -1,18 +1,18 @@
 :root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #ec4899;
-    --dark: #121212;
-    --darker: #0a0a0a;
-    --light: #f8fafc;
-    --text-main: #e2e8f0;
-    --text-muted: #94a3b8;
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --accent-gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+    --primary: #c9a84c;
+    --primary-dark: #b08d3a;
+    --secondary: #e8d5a3;
+    --dark: #0b0b0b;
+    --darker: #050505;
+    --light: #faf6ee;
+    --text-main: #e8dcc8;
+    --text-muted: #a09580;
+    --glass: rgba(201, 168, 76, 0.06);
+    --glass-border: rgba(201, 168, 76, 0.18);
+    --accent-gradient: linear-gradient(135deg, #c9a84c, #e8d5a3, #d4af37);
     --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.4);
-    --glow-primary: rgba(99, 102, 241, 0.3);
+    --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.6);
+    --glow-primary: rgba(201, 168, 76, 0.3);
 }
 
 * {
@@ -23,11 +23,12 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ephesis', cursive;
     color: var(--text-main);
     background-color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    letter-spacing: 0.5px;
 }
 
 a,
@@ -47,8 +48,8 @@ h2,
 h3,
 h4,
 .logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-family: 'Ephesis', cursive;
+    font-weight: 400;
 }
 
 .container {
@@ -65,7 +66,7 @@ h4,
     height: 80px;
     display: flex;
     align-items: center;
-    background: rgba(18, 18, 18, 0.7);
+    background: rgba(11, 11, 11, 0.85);
     backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid var(--glass-border);
@@ -107,8 +108,8 @@ h4,
 }
 
 .nav-links a:hover {
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    color: var(--primary);
+    text-shadow: 0 0 15px rgba(201, 168, 76, 0.4);
 }
 
 /* Hero Section */
@@ -119,8 +120,8 @@ h4,
     position: relative;
     padding: 120px 0 80px;
     background:
-        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.06) 0%, transparent 40%);
 }
 
 .hero-content {
@@ -181,13 +182,13 @@ h4,
     background-size: 200% auto;
     color: white;
     border: none;
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 10px 25px rgba(201, 168, 76, 0.25);
 }
 
 .btn-primary:hover {
     background-position: right center;
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 35px rgba(201, 168, 76, 0.4);
 }
 
 .btn-secondary {
@@ -543,7 +544,7 @@ h4,
     transform: rotate(10deg) scale(1.1);
     background: var(--accent-gradient);
     border-color: transparent;
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 40px rgba(201, 168, 76, 0.4);
 }
 
 .edu-icon-container i {
