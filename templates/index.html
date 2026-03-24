@@ -1,0 +1,501 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Radha Krishna Ejjagani | Creative Developer{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Radha Krishna <span class="gradient-text">Ejjagani</span></h1>
+            <h2 class="hero-subtitle-dev">Building Scalable Web Solutions & Intelligent Algorithms</h2>
+            <p class="hero-subtitle">I'm a full-stack developer and problem solver skilled in Python, C++, and modern
+                web technologies. I specialize in building robust platforms and efficient algorithms.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-background"></div>
+</section>
+
+<section id="about" class="section about">
+    <div class="container">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I am a passionate developer with a strong foundation in computer science and problem-solving. My
+                    expertise ranges from building full-stack web applications to implementing complex algorithms for
+                    data processing.</p>
+                <div class="cta-buttons" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+                    <button id="viewResumeBtn" class="btn btn-primary">View Resume</button>
+                </div>
+                <h3 class="subsection-title">Technical Expertise</h3>
+                <div class="skills-category">
+                    <h4>Languages</h4>
+                    <div class="skills">
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=cpp" alt="C++"> C++</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=py" alt="Python"> Python</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=mysql" alt="SQL"> SQL</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+                            JavaScript</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Frameworks & Web</h4>
+                    <div class="skills">
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=django" alt="Django">
+                            Django</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=react" alt="ReactJS">
+                            ReactJS</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=nodejs" alt="NodeJS">
+                            NodeJS</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=html" alt="HTML5"> HTML5</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=css" alt="CSS3"> CSS3</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Tools & Platforms</h4>
+                    <div class="skills">
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+                            MySQL</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=git" alt="Git"> Git /
+                            GitHub</span>
+                        <span class="skill-tag"><img src="https://skillicons.dev/icons?i=vscode" alt="VS Code"> VS
+                            Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section projects">
+    <div class="container">
+        <style>
+            .featured-project-card {
+                display: flex;
+                gap: 3rem;
+                background: var(--glass, rgba(255, 255, 255, 0.05));
+                padding: 2.5rem;
+                border-radius: 20px;
+                border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
+                margin-bottom: 5rem;
+                transition: transform 0.3s, border-color 0.3s;
+            }
+
+            .featured-project-card:hover {
+                transform: translateY(-5px);
+                border-color: #10b981;
+            }
+
+            .featured-project-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .featured-project-info h3 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+                color: white;
+                line-height: 1.2;
+            }
+
+            .featured-project-info p {
+                font-size: 1.15rem;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+                color: #a0a0c0;
+            }
+
+            @media (max-width: 900px) {
+                .featured-project-card {
+                    flex-direction: column;
+                    padding: 1.5rem;
+                    gap: 1.5rem;
+                }
+
+                .featured-project-card .project-image {
+                    min-height: 250px !important;
+                }
+
+                .featured-project-info h3 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
+
+        <h2 class="section-heading">Featured Project</h2>
+
+        <a href="https://github.com/radhakrishna52/One-Fold-Shopping" target="_blank" class="project-link"
+            style="text-decoration: none;">
+            <div class="featured-project-card">
+                <div class="project-image"
+                    style="flex: 1; min-height: 350px; border-radius: 16px; background-image: url('https://images.unsplash.com/photo-1721152531778-47bb07d618bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+                </div>
+                <div class="featured-project-info">
+                    <span class="project-date"
+                        style="font-size: 1rem; color: #10b981; font-weight: 600; margin-bottom: 1rem; display: block;">August
+                        2025</span>
+                    <h3>One Fold Shopping</h3>
+                    <p>Django-based e-commerce platform featuring multi-category collections (Men, Women, Kids) with a
+                        focus on seamless user experience across devices.</p>
+                    <div class="project-tech" style="margin-bottom: 2.5rem;">
+                        <span><img src="https://skillicons.dev/icons?i=django">Django</span><span><img
+                                src="https://skillicons.dev/icons?i=py">Python</span><span><img
+                                src="https://skillicons.dev/icons?i=html">HTML/CSS</span><span>eCommerce</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <h2 class="section-heading">More Projects</h2>
+        <div class="project-grid">
+            <a href="https://github.com/radhakrishna52/Nyayasetu-Django-Project-" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://plus.unsplash.com/premium_photo-1679517155620-8048e22078b1?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-date">September 2025</span>
+                        <h3>NyayaSetu: AI Grievance System</h3>
+                        <p>AI-driven grievance redressal system that automates complaint tracking, ensures timely
+                            resolutions with SLA-based escalation, and enhances transparency.</p>
+                        <div class="project-tech">
+                            <span><img src="https://skillicons.dev/icons?i=django">Django</span><span><img
+                                    src="https://skillicons.dev/icons?i=py">Python</span><span>AI</span><span>SLA
+                                Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/radhakrishna52/Travel-wise-Project" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1650884230712-971a9a1f96fd?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-date">July 2025</span>
+                        <h3>Travel Wise</h3>
+                        <p>Full-stack travel planning application built with React, Node.js, and MongoDB. Features
+                            RESTful
+                            APIs and dynamic UI components for streamlined travel itinerary management.</p>
+                        <div class="project-tech">
+                            <span><img src="https://skillicons.dev/icons?i=react">React</span><span><img
+                                    src="https://skillicons.dev/icons?i=nodejs">Node.js</span><span><img
+                                    src="https://skillicons.dev/icons?i=mongodb">MongoDB</span><span>REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/radhakrishna52/INT219-INT220" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1743119638006-a01d4625745d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-date">April 2025</span>
+                        <h3>Virtual Exhibition Platform</h3>
+                        <p>Web-based platform for showcasing, buying, and selling digital artwork. Built interactive
+                            gallery
+                            pages to enhance engagement and accessibility.</p>
+                        <div class="project-tech">
+                            <span><img src="https://skillicons.dev/icons?i=html">HTML</span><span><img
+                                    src="https://skillicons.dev/icons?i=css">CSS</span><span><img
+                                    src="https://skillicons.dev/icons?i=php">PHP</span><span><img
+                                    src="https://skillicons.dev/icons?i=mysql">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/radhakrishna52/Radhakrishna5" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-image"
+                        style="background-image: url('https://plus.unsplash.com/premium_photo-1663013097238-f6dcbb84f965?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-date">January 2024</span>
+                        <h3>Handcraft Management System</h3>
+                        <p>Platform for showcasing handmade crafts through an organized digital catalog. Features
+                            product
+                            filtering and discovery for artisans.</p>
+                        <div class="project-tech">
+                            <span><img src="https://skillicons.dev/icons?i=html">HTML</span><span><img
+                                    src="https://skillicons.dev/icons?i=css">CSS</span><span><img
+                                    src="https://skillicons.dev/icons?i=js">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section education">
+    <div class="container">
+        <h2 class="section-heading">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" style="position: relative; min-height: 140px;">
+                    <div class="edu-icon-container">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div style="position: absolute; top: 1.5rem; right: 1.5rem;">
+                        <span
+                            style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.4); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Pursuing</span>
+                    </div>
+                    <span class="timeline-date">Since August 2023</span>
+                    <h3 style="max-width: 75%; padding-right: 1rem;">Lovely Professional University</h3>
+                    <p class="timeline-subtitle">B-Tech – CSE</p>
+                    <p>Phagwara, Punjab</p>
+                    <div
+                        style="position: absolute; bottom: 1.5rem; right: 1.5rem; text-align: right; color: var(--primary);">
+                        <span style="display: block; font-size: 2.5rem; font-weight: 800; line-height: 1;">6.18</span>
+                        <span
+                            style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">CGPA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" style="position: relative; min-height: 140px;">
+                    <div class="edu-icon-container">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div style="position: absolute; top: 1.5rem; right: 1.5rem;">
+                        <span
+                            style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Completed</span>
+                    </div>
+                    <span class="timeline-date">June 2021 – March 2023</span>
+                    <h3 style="max-width: 75%; padding-right: 1rem;">Narayana Jr College</h3>
+                    <p class="timeline-subtitle">Intermediate</p>
+                    <p>Hyderabad, Telangana</p>
+                    <div
+                        style="position: absolute; bottom: 1.5rem; right: 1.5rem; text-align: right; color: var(--primary);">
+                        <span style="display: block; font-size: 2.5rem; font-weight: 800; line-height: 1;">89<span
+                                style="font-size: 1.5rem;"></span></span>
+                        <span
+                            style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Percentage</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content" style="position: relative; min-height: 140px;">
+                    <div class="edu-icon-container">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div style="position: absolute; top: 1.5rem; right: 1.5rem;">
+                        <span
+                            style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Completed</span>
+                    </div>
+                    <span class="timeline-date">June 2020 – March 2021</span>
+                    <h3 style="max-width: 75%; padding-right: 1rem;">Sri Vivekananda Vidyalayam</h3>
+                    <p class="timeline-subtitle">Matriculation</p>
+                    <p>Vemsoor, Telangana</p>
+                    <div
+                        style="position: absolute; bottom: 1.5rem; right: 1.5rem; text-align: right; color: var(--primary);">
+                        <span style="display: block; font-size: 2.5rem; font-weight: 800; line-height: 1;">100<span
+                                style="font-size: 1.5rem;"></span></span>
+                        <span
+                            style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Percentage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section extra">
+    <div class="container">
+        <div class="extra-grid">
+            <div class="certificates">
+                <h2 class="section-heading">Certificates</h2>
+                <ul class="cert-list">
+                    <li><strong>HackerRank</strong> SQL Skill Certificate</li>
+                    <li><strong>CSE Pathshala</strong> Basic Python towards ML/AI</li>
+                    <li><strong>Coursera</strong> Hardware & OS (Honors)</li>
+                    <li><strong>Coursera</strong> Beginning English Grammar (UC Irvine)</li>
+                </ul>
+            </div>
+            <div class="achievements">
+                <h2 class="section-heading">Achievements</h2>
+                <div class="achievement-item">
+                    <h4>Binary Blitz Hackathon</h4>
+                    <p>Advanced to round 2 among 50 teams; built a 24-hour prototype in a 3-member team.</p>
+                </div>
+                <div class="achievement-item">
+                    <h4>Social Service Volunteer</h4>
+                    <p>Assisted care for 15+ children and organized 50+ meals, earning a service appreciation
+                        certificate.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact">
+    <div class="container">
+        <div class="contact-card">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out via email or connect with
+                me on social media.</p>
+            <div class="contact-links">
+                <a href="mailto:radhakrishnaejjagani@gmail.com" class="btn btn-primary">Email Me</a>
+                <div class="social-footer-links">
+                    <a href="http://www.linkedin.com/in/radhakrishna52" target="_blank">LinkedIn</a>
+                    <a href="http://www.github.com/radhakrishna52" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <p class="mobile-info">Mobile: +91 9542865479</p>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Modal -->
+<div class="modal-overlay" id="resumeModalOverlay"></div>
+<div id="resumeModal" class="resume-modal">
+    <div class="resume-modal-header">
+        <h3>My Resume</h3>
+        <button class="close-modal" id="closeResumeModal">&times;</button>
+    </div>
+    <div class="resume-modal-content">
+        <iframe src="{% static 'docs/Resume.pdf' %}" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+</div>
+
+<style>
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        backdrop-filter: blur(2px);
+    }
+
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .resume-modal {
+        position: fixed;
+        top: 0;
+        right: -50vw;
+        /* Start hidden */
+        width: 50vw;
+        /* Half side */
+        height: 100vh;
+        /* Full screen height */
+        background: #111;
+        /* Dark theme to match portfolio */
+        color: #fff;
+        z-index: 9999;
+        box-shadow: -10px 0 25px rgba(0, 0, 0, 0.5);
+        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-modal.active {
+        right: 0;
+        /* Slide in */
+    }
+
+    .resume-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background: #1a1a2e;
+        border-bottom: 1px solid #2a2a4a;
+    }
+
+    .resume-modal-header h3 {
+        margin: 0;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .close-modal {
+        font-size: 2rem;
+        line-height: 1;
+        background: transparent;
+        border: none;
+        color: #a0a0c0;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+        color: #ff4b4b;
+    }
+
+    .resume-modal-content {
+        flex: 1;
+        width: 100%;
+    }
+
+    @media (max-width: 900px) {
+        .resume-modal {
+            width: 80vw;
+            right: -80vw;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .resume-modal {
+            width: 100vw;
+            right: -100vw;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const viewResumeBtn = document.getElementById('viewResumeBtn');
+        const modal = document.getElementById('resumeModal');
+        const overlay = document.getElementById('resumeModalOverlay');
+        const closeBtn = document.getElementById('closeResumeModal');
+
+        if (viewResumeBtn) {
+            viewResumeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (overlay) overlay.addEventListener('click', closeModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    });
+</script>
+{% endblock %}
